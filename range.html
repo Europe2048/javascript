@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>number sequence</title>
+	<link rel="stylesheet" type="text/css" href="css/10form.css">
+	<style>
+		body {
+			background-color: #202840;
+		}
+		div {
+			height: fit-content;
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+<div>      
+    <form name="sequence" action="javascript:sequence()">
+    <label for="n">Введи діапазон чисел, щоб вивести:</label><br>
+        <input class="num" name="min" type="text" value="1" size="5">
+        <input class="num" name="max" type="text" value="100" size="5">
+        <input class="btn" type="submit" value="Ввести">
+        <input class="btn" type="reset" value="Скинути">
+    </form>
+<span id="enter"></span>
+</div>
+<script>
+function sequence() {
+	let min = +document.sequence.min.value;
+	let max = +document.sequence.max.value;
+	output = "";
+	for (let count = min; count <= max; count++){
+		output += count + " ";
+	}
+	document.getElementById("enter").innerHTML = output;
+}
+</script>
+</body>
+</html>

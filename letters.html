@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>something</title>
+  <style>
+    body {
+      background-color: green;
+    }
+    span {
+      color: springgreen;
+      font-family: "Space Mono";
+    }
+  </style>
+</head>
+<body>
+<div>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR618LLovkbZNgxHUhMF9IZZjgGuKSqGdfHYw&s">
+</div>
+<span>i have absolutely nothing to say here so enjoy this picture of a platypus</span>
+<script>
+let language = prompt('Англійська або українська?');
+if (language = 'англійська') {
+  let letters == ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+  let input = prompt('Enter a letter.').toUpperCase();
+} else if (language == 'українська') {
+  let letters = ['А', 'Б', 'В', 'Г', 'Ґ', 'Д', 'Е', 'Є', 'Ж', 'З', 'И', 'І', 'Ї', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ь', 'Ю', 'Я']
+  let input = prompt('Введи літеру.').toUpperCase();
+}
+let answer = letters.indexOf(input);
+if (answer >= 0) {
+  answer += 1;
+  alert(answer);
+} else {
+  alert(`letter ${input} not found`)
+}
+</script>
+</body>
+</html>

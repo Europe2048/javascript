@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>arrays</title>
+  <link rel="stylesheet" type="text/css" href="css/10form.css">
+  <style>
+    body {
+      background-color: #382040;
+    }
+    #enter {
+      font-family: "Segoe Print";
+    }
+    p {
+      margin: 0;
+    }
+    div {
+      height: fit-content;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+<div>      
+    <form name="compliments" action="javascript:show()">
+    <label for="n">How many compliments do you want?</label><br>
+        <input class="num" name="amount" type="text" size="4">
+        <input class="btn" type="submit" value="Ввести">
+        <input class="btn" type="reset" value="Скинути">
+    </form>
+<span id="enter"></span>
+</div>
+<script>
+
+let compliments = ['handsome', 'good', 'wonderful', 'amazing', 'smart', 'kind', 'loving', 'strong', 'fast', 'lucky', 'popular', 'confident', 'big', 'unique'];
+let animals = ['cat', 'dog', 'parrot', 'rabbit', 'squirrel', 'butterfly', 'mouse', 'cheetah', 'fish', 'monkey', 'panda', 'kangaroo', 'pig', 'cow', 'deer', 'bear', 'wolf', 'duck', 'swan']
+let emoji = ['😺', '🐶', '🦜', '🐰', '🐿', '🦋', '🐭', '🐆', '🐟', '🐒', '🐼', '🦘', '🐷', '🐮', '🦌', '🐻', '🐺', '🦆', '🦢']
+let colors = ['white', 'yellow', 'cyan', 'lime', '#FF80FF', '#FF8080', '#FFC080', 'silver', '#00FF80', '#8080FF', '#80C0FF', 'gold', 'orange', '#FF80C0', '#80FF80', '#FFFF80', '#80FFFF']
+
+function show() {
+  let amount = document.compliments.amount.value;
+  let output = "";
+  for (i = 0; i < amount; i++) {
+    let randomComp = Math.floor(Math.random()*compliments.length);
+    let randomAnimal = Math.floor(Math.random()*animals.length);
+    let randomColor = Math.floor(Math.random()*colors.length);
+    output += `<p style="color: ${colors[randomColor]}">You are as ${compliments[randomComp]} as a ${animals[randomAnimal]}! ${emoji[randomAnimal]}</p><br>`;
+  }
+  document.getElementById("enter").innerHTML = output;
+}
+</script>
+</body>
+</html>

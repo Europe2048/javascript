@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>detect spam</title>
+	<link rel="stylesheet" type="text/css" href="css/10form.css">
+	<style>
+		body {
+			background-color: #382040;
+		}
+	</style>
+</head>
+<body>
+<div>      
+    <form name="forum" action="javascript:spam()">
+    <label for="n">введи рядок</label><br>
+        <input class="num" name="str" type="text" size="50">
+        <input class="btn" type="submit" value="Ввести">
+        <input class="btn" type="reset" value="Скинути">
+    </form>
+<span id="enter"></span>
+</div>
+<script>
+function spam() {
+	str = document.forum.str.value.toLowerCase();
+	let output;
+	if (~(str.indexOf("безкоштовно")) || ~(str.indexOf("гарантія"))) {
+		output = "!! спам знайдено !!";
+	} else if (!str) {
+		output = "рядок пусто";
+	} else {
+		output = "немає спама ☺";
+	}
+	document.getElementById("enter").innerHTML = output;
+}
+</script>
+</body>
+</html>

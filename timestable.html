@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>times table</title>
+	<link rel="stylesheet" type="text/css" href="css/10form.css">
+	<style>
+		body {
+			background-color: #204040;
+		}
+		div {
+			height: fit-content;
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+<div>      
+    <form name="table" action="javascript:generate()">
+    <label for="n">Введіть кількість колонок та рядів таблиці множення:</label><br>
+        <input class="num" name="width" type="text" value="10" size="2">
+        <input class="num" name="height" type="text" value="10" size="2">
+        <input class="btn" type="submit" value="Ввести">
+        <input class="btn" type="reset" value="Скинути">
+    </form>
+<span id="enter"></span>
+</div>
+<script>
+function generate() {
+	let width = +document.table.width.value;
+	let height = +document.table.height.value;
+	let result = "";
+	for (let i=1; i<=height; i++) {
+		for (let j=1; j<=width; j++) {
+			result += `${i} · ${j} = ${i*j}<br>`;
+		}
+	}
+	document.getElementById("enter").innerHTML = result;
+}
+</script>
+</body>
+</html>

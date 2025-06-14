@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>pyramid</title>
+	<link rel="stylesheet" type="text/css" href="css/10form.css">
+	<style>
+		body {
+			background-color: #203840;
+		}
+		div {
+			height: fit-content;
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+<div>      
+    <form name="pyramid" action="javascript:pyramid()">
+    <label for="n">Введіть символ для піраміду та його висоту:</label><br>
+        <input class="num" name="symbol" type="text" value="★" size="2">
+        <input class="num" name="size" type="text" value="10" size="3">
+        <input class="btn" type="submit" value="Ввести">
+        <input class="btn" type="reset" value="Скинути">
+    </form>
+<span id="enter"></span>
+</div>
+<script>
+function pyramid() {
+	let symbol = document.pyramid.symbol.value;
+	let size = +document.pyramid.size.value;
+	let output = "";
+	for (let height = 1; height <= size; height++) {
+		output += symbol.repeat(height) + "<br>";
+	}
+	document.getElementById("enter").innerHTML = output;
+}
+</script>
+</body>
+</html>

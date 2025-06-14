@@ -1,0 +1,186 @@
+div {
+    width: 100%;
+    text-align: center;
+}
+body {
+    background: linear-gradient(to bottom, #002040, #004080);
+}
+h1, p, span {
+    color: cyan;
+    font-family: "Noto Serif", "Rockwell Nova", serif;
+}
+button {
+    width:100%;
+    margin:2px;
+    background-color:black;
+    border-radius:21px;
+    border:3px solid black;
+    display:inline-block;
+    cursor:pointer;
+    color:white;
+    font-family:"PT Mono";
+    font-size:16px;
+    font-weight:bold;
+    padding:5px 10px;
+    text-decoration:none;
+}
+button:hover {
+    background-color:#404040;
+}
+button:active {
+    background-color:silver;
+    color: black;
+    box-shadow: 0px 0px 5px 0px silver;
+}
+.c0:hover {
+    background-color: maroon;
+}
+.c0:active {
+    background-color:red;
+    color: white;
+    box-shadow: 0px 0px 5px 0px red;
+}
+.c1:hover {
+    background-color: #802000;
+}
+.c1:active {
+    background-color:#ff4000;
+    color: white;
+    box-shadow: 0px 0px 5px 0px red;
+}
+.c2:hover {
+    background-color: #804000;
+}
+.c2:active {
+    background-color:orange;
+    color: white;
+    box-shadow: 0px 0px 5px 0px red;
+}
+.c3:hover {
+    background-color: #806000;
+}
+.c3:active {
+    background-color:#ffc000;
+    color: black;
+    box-shadow: 0px 0px 5px 0px red;
+}
+.c4:hover {
+    background-color: olive;
+}
+.c4:active {
+    background-color:yellow;
+    color: black;
+    box-shadow: 0px 0px 5px 0px red;
+}
+.c5:hover {
+    background-color:#608000;
+}
+.c5:active {
+    background-color:#c0ff00;
+    color: black;
+    box-shadow: 0px 0px 5px 0px red;
+}
+.c6:hover {
+    background-color:#408000;
+}
+.c6:active {
+    background-color:#80ff00;
+    color: black;
+    box-shadow: 0px 0px 5px 0px red;
+}
+.c7:hover {
+    background-color:#208000;
+}
+.c7:active {
+    background-color:#40ff00;
+    color: black;
+    box-shadow: 0px 0px 5px 0px red;
+}
+.c8:hover {
+    background-color:green;
+}
+.c8:active {
+    background-color:lime;
+    color: black;
+    box-shadow: 0px 0px 5px 0px red;
+}
+.c9:hover {
+    background-color:#008020;
+}
+.c9:active {
+    background-color:#00ff40;
+    color: black;
+    box-shadow: 0px 0px 5px 0px red;
+}
+.c10:hover {
+    background-color:#008040;
+}
+.c10:active {
+    background-color:#00ff80;
+    color: black;
+    box-shadow: 0px 0px 5px 0px red;
+}
+.c12:hover {
+    background-color:#008080;
+}
+.c12:active {
+    background-color:cyan;
+    color: black;
+    box-shadow: 0px 0px 5px 0px red;
+}
+.c13:hover {
+    background-color:#006080;
+}
+.c13:active {
+    background-color:#00c0ff;
+    color: black;
+    box-shadow: 0px 0px 5px 0px red;
+}
+.c14:hover {
+    background-color:#004080;
+}
+.c14:active {
+    background-color:#0080ff;
+    color: white;
+    box-shadow: 0px 0px 5px 0px red;
+}
+.c15:hover {
+    background-color:#002080;
+}
+.c15:active {
+    background-color:#0040ff;
+    color: white;
+    box-shadow: 0px 0px 5px 0px red;
+}
+.c16:hover {
+    background-color:navy;
+}
+.c16:active {
+    background-color:blue;
+    color: white;
+    box-shadow: 0px 0px 5px 0px red;
+}
+.c17:hover {
+    background-color:#200080;
+}
+.c17:active {
+    background-color:#4000ff;
+    color: white;
+    box-shadow: 0px 0px 5px 0px red;
+}
+.c18:hover {
+    background-color:#400080;
+}
+.c18:active {
+    background-color:#8000ff;
+    color: white;
+    box-shadow: 0px 0px 5px 0px red;
+}
+.c19:hover {
+    background-color:#600080;
+}
+.c19:active {
+    background-color:#c000ff;
+    color: white;
+    box-shadow: 0px 0px 5px 0px red;
+}

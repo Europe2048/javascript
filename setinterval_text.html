@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>chessboard</title>
+	<link rel="stylesheet" type="text/css" href="css/10form.css">
+</head>
+<body>
+<div id="demo"></div>
+<script>
+const element = document.getElementById("demo");
+let count = 0;
+let strings = ["Цей текст змінюється кожні 2 секунди.", "Це чудово, так?", "Змінився знову!", "старий текст вийшов з чату", "Я не робот.", "Привіт, світ!", "Небагато ідей...", "До побачення!"];
+element.innerHTML = `<span>${strings[count]}</span>`;
+function changeText(){ 
+    count++;
+    count = count%8;
+    element.innerHTML = `<span>${strings[count]}</span>`;
+}
+let timeId=setInterval(changeText, 2000);
+
+</script>
+</body>
+</html>

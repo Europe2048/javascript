@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>quadratic equation</title>
+	<link rel="stylesheet" type="text/css" href="css/10form.css">
+</head>
+<body>
+<div>      
+    <form name="quadratic" action="javascript:solve()">
+    <label for="n">Введи коефіціенти рівняння:</label><br>
+        <input class="num" name="a" type="text" value="1" size="5">
+        <input class="num" name="b" type="text" value="-1" size="5">
+        <input class="num" name="c" type="text" value="-1" size="5">
+        <input class="btn" type="submit" value="Ввести">
+        <input class="btn" type="reset" value="Скинути">
+    </form>
+<span id="enter"></span>
+</div>
+<script>
+function solve() {
+	let a = document.quadratic.a.value;
+	let b = document.quadratic.b.value;
+	let c = document.quadratic.c.value;
+	let output = "";
+	let equation = "";
+	if (a == 1) {
+		equation += "x²"
+	} else if (a != 0) {
+		equation += `${a}x²`
+	}
+	if (a == 0) {
+		if (b == 1) {
+			equation += "x"
+		} else if (b > 0) {
+			equation += `${b}x`
+		} else if (b < 0) {
+			equation += `-${-b}x`
+		}
+	} else {
+		if (b == 1) {
+			equation += "+x"
+		} else if (b > 0) {
+			equation += `+${b}x`
+		} else if (b < 0) {
+			equation += `-${-b}x`
+		}
+	}
+	if (a == 0 && b == 0) {
+		if (c < 0) {
+			equation += `-${-c}`
+		} else {
+			equation += `${c}`
+		}
+	} else {
+		if (c < 0) {
+			equation += `-${-c}`
+		} else if (c != 0) {
+			equation += `+${c}`
+		}
+	}
+	output += `${equation}=0<br>`;
+	let D = b*b - 4*a*c;
+	let x1 = (-b+Math.sqrt(D))/(2*a);
+	let x2 = (-b-Math.sqrt(D))/(2*a);
+
+	if (D > 0) {
+		output += `корені: x₁ = ${x1}, x₂ = ${x2}`;
+	} else if (D == 0) {
+		output += `корінь: x = ${x1}`;
+	} else if (D < 0) {
+		output += `немає коренів`;
+	} else {
+		output += "щось не так";
+	}
+	document.getElementById("enter").innerHTML = output;
+}
+</script>
+</body>
+</html>

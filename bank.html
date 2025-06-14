@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>withdraw from bank</title>
+  <link rel="stylesheet" type="text/css" href="css/10form.css">
+  <style>
+        body {
+            background-color: #403820;
+        }
+  </style>
+</head>
+<body>
+<div>      
+    <form name="bank" action="javascript:withdraw()">
+    <label for="n">Скільки гривень хочеш зняти?</label><br>
+        <input class="num" name="money" type="text" value="1000" size="4">
+        <input class="btn" type="submit" value="Ввести">
+        <input class="btn" type="reset" value="Скинути">
+    </form>
+<span id="enter"></span>
+</div>
+<script>
+function withdraw() {
+  money = document.bank.money.value;
+  let output;
+  if (+money < 50 || +money > 3000) {
+    output = 'Сума треба бути від 50 до 3000 гривень.';
+  } else if (+money % 50) {
+     output = 'Мінімальна купюра 50 грн.';
+  } else {
+     output = `Заберіть свої гроші: ${money} грн`;
+  }
+  document.getElementById("enter").innerHTML = output;
+}
+</script>
+</body>
+</html>

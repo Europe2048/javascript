@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>log in</title>
+	<link rel="stylesheet" type="text/css" href="css/10form.css">
+</head>
+<body>
+<div>      
+    <form name="substring" action="javascript:search()">
+    <label for="n">Введіть рядки:</label><br>
+        <input class="num" name="string" type="text" size="50">
+        <input class="num" name="sub" type="text" size="10">
+        <input class="btn" type="submit" value="Ввести">
+        <input class="btn" type="reset" value="Скинути">
+    </form>
+<span id="enter"></span>
+</div>
+<script>
+function search() {
+	string = document.substring.string.value;
+	sub = document.substring.sub.value;
+	let output = "";
+	for (i = 0; i <= string.length-sub.length; i++) {
+		if (string.slice(i, i+sub.length) == sub) {
+			alert(i);
+		}
+	}
+  document.getElementById("enter").innerHTML = output;
+}
+</script>
+</body>
+</html>

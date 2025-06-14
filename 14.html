@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+at least get me some rest
+<div>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLzRtxH-5NYn0xSstfcu57Z1m5V9cKUcCvBg&s">
+</div>
+<script>
+let salaries = {
+  "Василь": 10000,
+  "Петро": 30000,
+  "Дарина": 25000
+};
+let maximum = "немає співробітників";
+for (let person in salaries) {
+	if ((maximum == "немає співробітників") || (salaries[person] > salaries[maximum])) {
+		maximum = person;
+	}
+}
+alert(maximum);
+</script>
+</body>
+</html>

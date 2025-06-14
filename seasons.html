@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>seasons</title>
+	<link rel="stylesheet" type="text/css" href="css/10form.css">
+	<style>
+		body {
+			background-color: #304020;
+		}
+	</style>
+</head>
+<body>
+<div>      
+    <form name="season" action="javascript:season()">
+    <label for="n">Введи число місяця, почиаючи з січня:</label><br>
+        <input class="num" name="month" type="text" value="4" size="3">
+        <input class="btn" type="submit" value="Ввести">
+        <input class="btn" type="reset" value="Скинути">
+    </form>
+<span id="enter"></span>
+</div>
+<script>
+function season() {
+	let season = +document.season.month.value;
+	let output;
+	if (season == 12 || 1 <= season && season <= 2) {
+		output = "зима"; 
+	} else if (3 <= season && season <= 5) {
+		output = "весна"; 
+	} else if (6 <= season && season <= 8) {
+		output = "літо"; 
+	} else if (9 <= season && season <= 11) {
+		output = "осінь";
+	} else {
+		output = "в році 12 місяців!";
+	}
+	document.getElementById("enter").innerHTML = output;
+}
+</script>
+</body>
+</html>

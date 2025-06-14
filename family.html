@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>language family</title>
+	<link rel="stylesheet" type="text/css" href="css/10form.css">
+</head>
+<body>
+<div>      
+    <form name="family" action="javascript:family()">
+    <label for="n">Обери мову.</label><br>
+        <input class="num" name="lang" type="text" value="українська" size="30">
+        <input class="btn" type="submit" value="Ввести">
+        <input class="btn" type="reset" value="Скинути">
+    </form>
+<span id="enter"></span>
+</div>
+<script>
+function family() {
+	let language = document.family.lang.value;
+	let family;
+	switch (language) {
+	case 'іспанська': case 'португалська': case 'каталанська': case 'французька': case 'норманська': case 'італьянська': case 'романшська': case 'румунська': case 'лігурійська': case 'латинська':
+		family = 'романські мови';
+		break
+	case 'англійська': case 'німецька': case 'люксембурзька': case 'нідерландська': case 'норвезька': case 'шведська': case 'данська': case 'фарерська': case 'ісландська': case 'африкаанс':
+		family = 'германські мови';
+		break
+	case 'російська': case 'українська': case 'білоруська': case 'польська': case 'сербська': case 'боснійська': case 'хорватська': case 'чорногорська': case 'болгарська': case 'чеська': case 'словацька': case 'македонська': case 'словенська':
+		family = "слов'янські мови";
+		break
+	case 'литовська': case 'латиська':
+		family = "балтійські мови";
+		break
+	case 'ірландська': case 'шотландська': case 'валлійська': case 'менська':
+		family = "келтські мови";
+		break
+	case 'перська': case 'пушту':
+		family = "іранські мови";
+		break
+	case 'албанська': case 'вірменська': case 'грецька':
+		family = "індоєвропейські мови";
+		break
+	case 'фінська': case 'угорська': case 'естонська':
+		family = 'уралські мови';
+		break
+	case 'турецька': case 'узбецька': case 'азербайджанська': case 'казахська': case 'киргизька': case 'туркменська':
+		family = 'тюркські мови';
+		break
+	case 'грузинська':
+		family = 'картвельські мови';
+		break
+	case 'арабська': case 'іврит': case 'малтійська': case 'амхарська': case 'тигринья':
+		family = 'семітські мови';
+		break
+	case 'монгольська':
+		family = 'монгольські мови';
+		break
+	case 'китайська': case 'мандаринська': case 'тайванська': case 'бірманська': case 'тибетська': case 'дзонг-ке': 
+		family = 'сино-тибетські мови';
+		break
+	case 'урду': case 'гінді': case 'маратхі': case 'гуджараті': case 'бходжпурі': case 'пенджабська': case 'бенгалська': case 'непалська': case 'мальдівська':
+		family = 'індоарійські мови';
+		break
+	case 'тамільська': case 'телугу': case 'каннада':
+		family = 'дравідійські мови';
+		break
+	case 'японська':
+		family = 'японсько-рюкююські мови';
+		break
+	case 'корейська': case 'чеджуська':
+		family = 'корейські мови';
+		break
+	case 'тайська': case 'лаоська':
+		family = 'тай-кадайські мови';
+		break
+	case 'йоруба': case 'ігбо': case 'фульфульде':
+		family = 'нігеро-конголезькі мови';
+		break
+	case 'суахілі': case 'коса': case 'зулу': case 'лінґала': case 'сесото':
+		family = 'мови банту';
+		break
+	case 'хауса':
+		family = 'чадські мови';
+		break
+	case 'сомалійська':
+		family = 'афразійські мови';
+		break
+	case "в'єтнамська": case 'кхмерська':
+		family = 'австроазійські мови';
+		break
+	case 'малагасійська': case 'індонезійська': case 'яванська': case 'малайська': case 'тетум': case 'філіппінська': case 'фіджійська': case 'тагальська':
+		family = 'австронезійські мови';
+		break
+	case 'гренландська':
+		family = 'ескімосько-алеутські мови';
+		break
+	case 'айнська':
+		family = 'ізольована мова';
+		break
+	case 'нігерійський піджин': case 'ток-пісін': case 'біслама': case 'піджин соломонових островів': 
+		family = 'англо-креольська мова';
+		break
+	case 'гаїтянська креольська': case 'антильська франко-креольська':
+		family = 'франко-креольська мова';
+		break
+	case 'есперанто': case 'токі-пона':
+		family = 'штучна мова';
+		break
+	default:
+		family = 'не знаю таку мову';
+		break
+	}
+	document.getElementById("enter").innerHTML = family;
+}
+</script>
+</body>
+</html>

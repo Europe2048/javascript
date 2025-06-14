@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>circles</title>
+	<link rel="stylesheet" type="text/css" href="css/10form.css">
+	<style>
+		div {
+			height: fit-content;
+			position: relative;
+		}
+		canvas {
+			border: 3px solid black;
+			background: white;
+		}
+	</style>
+</head>
+<body>
+<div>      
+    <form name="circles" action="javascript:draw()">
+    <label for="n">Скільки кіл ти хочеш?</label><br>
+        <input class="num" name="amount" type="text" size="5" value="50">
+        <input class="btn" type="submit" value="Ввести">
+        <input class="btn" type="reset" value="Скинути">
+    </form>
+<span id="enter"></span>
+</div>
+<script>
+function draw() {
+	document.getElementById("enter").innerHTML = '<canvas id="canvas" width="500" height="500"></canvas>';
+	let c = document.getElementById("canvas");
+	let cxt = c.getContext("2d"); 
+	let amount = document.circles.amount.value;
+	cxt.lineWidth = 6;
+	cxt.clearRect(0,0,500,500);
+	for (i = 0; i < amount; i++) {
+		let radius = 25+Math.floor(Math.random()*51);
+		let x = radius+3+Math.floor(Math.random()*(c.width-(2*radius)-6));                                        
+		let y = radius+3+Math.floor(Math.random()*(c.height-(2*radius)-6));
+		let fillColor = `rgb(${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)})`;
+		let borderColor = `rgb(${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)})`;
+		cxt.beginPath();                                             
+		cxt.arc(x, y, radius, 0, 2*Math.PI, false); 
+		cxt.strokeStyle = borderColor;                            
+		cxt.stroke();
+		cxt.fillStyle = fillColor;
+		cxt.fill();
+	}
+}
+</script>
+</body>
+</html>

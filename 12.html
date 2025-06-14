@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>detect spam</title>
+</head>
+<body>
+<script>
+/*
+let x = prompt("введи рядок", "у дворі трава на траві дрова");
+if (x == "") {
+	alert("");
+} else {
+	alert(x.charAt(0).toUpperCase() + x.slice(1))
+}
+^ (!)
+let str = prompt("введи рядок");
+str = str.toLowerCase();
+if (~(str.indexOf("безкоштовно")) || ~(str.indexOf("гарантія"))) {
+	alert("!! спам знайдено !!");
+} else if (!str) {
+	alert("рядок пусто");
+} else {
+	alert("немає спама ☺");
+}
+
+let str = prompt("введи рядок", "бредуть бобри в сирі бори. бобри хоробрі, а для бобрят добрі");
+let substr = prompt("введи рядок", "ри");
+let start = str.indexOf(substr);
+do {
+	alert(start);
+	start = str.indexOf(substr, start+1);
+} while (~start)
+*/
+let num = prompt("введи число", "69420");
+alert(`у числі ${num} ${num.length} цифр`);
+let sum = 0;
+let evensum = 0;
+let oddsum = 0;
+for (i = 0; i < num.length; i++) {
+	alert(num[i]);
+	sum += +num[i];
+	if (+num[i] % 2 == 0) {
+		evensum += +num[i];
+	} else {
+		oddsum += +num[i];
+	}
+}
+alert(`сума чисел: ${sum}`)
+alert(`сума парних чисел: ${evensum}`)
+alert(`сума непарних чисел: ${oddsum}`)
+// ^ (!)
+</script>
+</body>
+</html>
